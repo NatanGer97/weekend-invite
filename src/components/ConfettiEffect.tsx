@@ -16,15 +16,18 @@ export default function ConfettiEffect({ approved }: ConfettiEffectProps) {
         origin: { y: 0.7 },
         colors,
         ...opts,
-        particleCount: Math.floor(200 * particleRatio),
+        particleCount: Math.floor(120 * particleRatio),
       })
     }
 
-    fire(0.25, { spread: 26, startVelocity: 55, origin: { x: 0.1, y: 0.7 } })
-    fire(0.25, { spread: 26, startVelocity: 55, origin: { x: 0.9, y: 0.7 } })
-    fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 })
-    fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 })
-    fire(0.1, { spread: 120, startVelocity: 45 })
+    // Defer off the main thread so React can commit the state change first
+    const t = setTimeout(() => {
+      fire(0.3, { spread: 60, startVelocity: 50, origin: { x: 0.2, y: 0.75 } })
+      fire(0.3, { spread: 60, startVelocity: 50, origin: { x: 0.8, y: 0.75 } })
+      fire(0.4, { spread: 100, decay: 0.91, scalar: 0.9 })
+    }, 80)
+
+    return () => clearTimeout(t)
   }, [approved])
 
   return null
