@@ -15,10 +15,24 @@
       rel="stylesheet"
     />
     <title>הזמנה לסופ״ש</title>
-    <script type="module" crossorigin src="/weekend-invite/assets/index-m3KTB-d-.js"></script>
-    <link rel="stylesheet" crossorigin href="/weekend-invite/assets/index-DxO-i_QM.css">
+    <script type="module" crossorigin src="/weekend-invite/assets/index-C_KyAZyc.js"></script>
+    <link rel="stylesheet" crossorigin href="/weekend-invite/assets/index-Cf0d02T2.css">
   </head>
   <body>
+    <style>
+      @keyframes sk-pulse{0%,100%{opacity:.45}50%{opacity:.9}}
+      .sk{animation:sk-pulse 1.5s ease-in-out infinite}
+    </style>
+    <div id="loader" style="position:fixed;inset:0;background:#100b13;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .3s ease">
+      <div style="width:min(420px,88vw);padding:40px 32px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);backdrop-filter:blur(12px);display:flex;flex-direction:column;gap:14px;align-items:center">
+        <div class="sk" style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.09);margin-bottom:6px"></div>
+        <div class="sk" style="height:18px;border-radius:8px;background:rgba(255,255,255,.09);width:78%"></div>
+        <div class="sk" style="height:13px;border-radius:8px;background:rgba(255,255,255,.06);width:58%;animation-delay:.1s"></div>
+        <div class="sk" style="height:44px;border-radius:14px;background:rgba(255,255,255,.05);width:100%;margin-top:6px;animation-delay:.15s"></div>
+        <div class="sk" style="height:44px;border-radius:14px;background:rgba(255,255,255,.05);width:100%;animation-delay:.22s"></div>
+        <div class="sk" style="height:52px;border-radius:16px;background:rgba(225,80,110,.15);width:100%;margin-top:6px;animation-delay:.3s"></div>
+      </div>
+    </div>
     <div id="root"></div>
   </body>
 </html>
